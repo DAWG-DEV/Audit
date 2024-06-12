@@ -12,7 +12,7 @@ const gasInfo = { gasPrice: 90000000000, gasLimit: 5000000 };
 
 async function main() {
     const initialSupply = 69420000000000;
-    const MemeToken = await hre.ethers.getContractFactory("MemeToken");
+    const MemeToken = await hre.ethers.getContractFactory("Token");
     const MemeTokenDe = await MemeToken.deploy(initialSupply, "StarBase", "ST", ownerAddress, gasInfo);
     console.log("MemeToken deployed at:", MemeTokenDe.target);
     let balance = await MemeTokenDe.balanceOf(ownerAddress);

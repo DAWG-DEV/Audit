@@ -20,7 +20,7 @@ describe("Token contract", function(){
     async function deployContractsFixture() {
 
         const initialSupply = 69420000000000;
-        const MemeToken = await hre.ethers.getContractFactory("MemeToken");
+        const MemeToken = await hre.ethers.getContractFactory("Token");
         const MemeTokenDe = await MemeToken.deploy(initialSupply, "StarBase", "ST", ownerAddress, gasInfo);
         console.log("MemeToken deployed at:", MemeTokenDe.target);
 
